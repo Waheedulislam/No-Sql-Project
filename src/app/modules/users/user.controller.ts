@@ -1,7 +1,7 @@
-import { NextFunction, Request, RequestHandler, Response } from 'express';
 import { userService } from './user.service';
 import { sendResponse } from '../../utils/sendResponse';
 import { catchAsync } from '../../utils/catchAsync';
+import httpStatus from 'http-status';
 
 //create students
 const createStudent = catchAsync(async (req, res, next) => {
