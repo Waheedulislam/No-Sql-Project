@@ -5,7 +5,7 @@ import httpStatus from 'http-status';
 
 // get all students
 const getAllStudents = catchAsync(async (req, res) => {
-  const result = await StudentServices.getAllStudentsFromDB();
+  const result = await StudentServices.getAllStudentsFromDB(req.query);
 
   // send response
   sendResponse(res, {
